@@ -4,7 +4,7 @@ const port = 3000;
 const routes = require('./api/endPoints');
 const cors = require('cors');
 
-app.use(cors( { origin: ["http://localhost:5173"],  
+app.use(cors( { origin: "*",  
                 methods: ["GET", "POST"],
 } ));
 
