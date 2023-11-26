@@ -21,7 +21,7 @@ module.exports.validate = (req, res) => {
             }
         });
     } catch (e) {  
-        // manejar el error
+        // manejar el errorrrr
     }
 }
 
