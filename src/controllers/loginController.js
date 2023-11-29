@@ -19,7 +19,7 @@ module.exports.login = (req, res) => {
             }
         });
     } catch (e) {  
-        // manejar el errorr
+        // FUNCIONA OK!!
     }
 }
 
