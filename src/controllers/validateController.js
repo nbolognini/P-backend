@@ -14,10 +14,12 @@ module.exports.validate = (req, res) => {
             if (result.length > 0) {
                 const token = jwt.sign({ username }, 'Stack', { expiresIn: '2m' });
                 console.log(result);
+                //Si encuentro el user y el pass, devuelvo el token
                 return res.send({token});
             } else {
                 console.log('Usuario o contraseña incorrectos');
-                return res.send({message: 'Usuario o contraseña incorrectos'});
+                //Si no encuentro el user y el pass, devuelvo undefined
+                return res.send(undefined);
             }
         });
     } catch (e) {  
