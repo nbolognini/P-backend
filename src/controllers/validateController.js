@@ -13,6 +13,7 @@ module.exports.validate = (req, res) => {
 
             if (result.length > 0) {
                 const token = jwt.sign({ username }, 'Stack', { expiresIn: '20m' });
+                //Acá generé la const role para agarre los datos traido de la base de datos
                 const role = result[0].role;
                 console.log(role);
                 //Si encuentro el user y el pass, devuelvo el token
